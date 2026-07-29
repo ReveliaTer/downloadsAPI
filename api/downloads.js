@@ -1,5 +1,5 @@
 import axios from "axios"
-import crypto from "crypto"
+import crypto from "node:crypto"
 import * as cheerio from "cheerio"
 import qs from "qs"
 
