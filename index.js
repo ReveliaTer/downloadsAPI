@@ -63,6 +63,4 @@ app.get('/api/spotify', async (req, res) => {
   res.json(results)
 })
 
-app.listen(port, () => {
-  console.log(`server http://localhost:${port}`)
-})
+export default app
