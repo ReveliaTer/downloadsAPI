@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Eater&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Crafty Girls", cursive;
+}
+
+body {
+  height: 100vh;
+  background: radial-gradient(ellipse at center, #002126, #000000);
+  color: #00D2FF;
+}
+
+#header p {
+  text-align: center;
+  font-size: 12px;
+}
+
+#header img {
+  display: block;
+  width: 380px;
+  padding: 10px;
+  height: 100px;
+  border: none;
+  border-radius: 20px;
+  margin: auto;
+  padding: 10px;
+}
+
+#explain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+#explain hr {
+  width: 45px;
+  height: 2.8px;
+  background: linear-gradient(90deg, transparent, #00D2FF, transparent);
+  border: none;
+  border-radius: 10px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+#explain h1 {
+  font-size: 23px;
+  font-family: "Eater", serif;
+}
+
+#select_platform {
+  display: flex;
+  margin: 15px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#select_platform button {
+  background: #00D2FF;
+  padding: 15px 17px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  border: none;
+}
+#select_platform button svg {
+  font-size: 25px;
+}
+
+
+
+#code_usage h4 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+#code_usage #btn_code {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 20px;
+}
+
+#code_usage #btn_code button {
+  background: #00D2FF;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  padding-top: 5px;
+}
+
+#code_usage #text_code {
+  width: 350px;
+  font-size: 10px;
+  margin: auto;
+}
+#text_code code {
+  font-family: "Crafty Girls", cursive !important;
+}
+#code_usage #text_code pre {
+  overflow-x: auto;
+}
+
+#download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#download button {
+  background: #00D2FF;
+  width: 350px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  margin-top: 7px;
+}
+#download p {
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 25px;
+}
+input[type="text"] {
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0);
+  color: #00D2FF;
+  width: 350px;
+  height: 50px;
+  border-radius: 15px;
+  border: solid #00D2FF 2px;
+  margin-top: 15px;
+  padding: 5px 10px;
+}
+input[type="text"]:focus {
+  box-shadow: 0 5px 30px rgba(102, 126, 234, 0.5);
+  outline: none;
+}
+button {
+  transition: ease 0.2s;
+}
+button:hover {
+  transform: scale(0.96);
+}
+
+footer {
+  margin: 7px 0;
+}
+footer hr {
+  border-color: #00D2FF;
+  background-color: #00D2FF;
+  height: 1px;
+  border: none;
+}
+footer div {
+  font-size: 12px;
+  text-align: center;
+  margin: 5px 0;
+}
+
+/* ==================== */
+.rainbow .keyword, .rainbow .comment  { color: #6aaaff; }
+.rainbow .keyword-import { color: #4a9eff; }
+.rainbow .keyword-export { color: #6ab0ff; }
+.rainbow .keyword-const، .rainbow .number { color: #7ab7ff; }
+.rainbow .keyword-let, .rainbow .string-single, .rainbow .type, .rainbow .support { color: #8fcbff; }
+.rainbow .keyword-function, .rainbow .string-double، .rainbow .function  { color: #aad0ff; }
+
+.rainbow .string, .rainbow .string-template  { color: #9ac7ff; }
+.rainbow .variable { color: #b3d6ff; }
+.rainbow .constant { color: #9ac7ff; }
