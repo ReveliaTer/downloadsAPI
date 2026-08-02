@@ -1,20 +1,14 @@
 import { instagram, tiktok, pinterest, spotify } from "./api/downloads.js";
 import express from 'express';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 const app = express();
-app.use(express.static('public'));
+const router = express.Router();
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+router.get('/', (req, res) => {
+  res.json({ message: "API is working!" });
 });
 
-app.get('/api/instagram', async (req, res) => {
+router.get('/instagram', async (req, res) => {
   const { url } = req.query;
   if (!url) {
     return res.status(400).json({
@@ -26,7 +20,7 @@ app.get('/api/instagram', async (req, res) => {
   res.json(results);
 });
 
-app.get('/api/tiktok', async (req, res) => {
+router.get('/tiktok', async (req, res) => {
   const { url } = req.query;
   if (!url) {
     return res.status(400).json({
@@ -38,7 +32,7 @@ app.get('/api/tiktok', async (req, res) => {
   res.json(results);
 });
 
-app.get('/api/pinterest', async (req, res) => {
+router.get('/pinterest', async (req, res) => {
   const { url } = req.query;
   if (!url) {
     return res.status(400).json({
@@ -50,7 +44,7 @@ app.get('/api/pinterest', async (req, res) => {
   res.json(results);
 });
 
-app.get('/api/spotify', async (req, res) => {
+router.get('/spotify', async (req, res) => {
   const { url } = req.query;
   if (!url) {
     return res.status(400).json({
@@ -61,5 +55,7 @@ app.get('/api/spotify', async (req, res) => {
   const results = await spotify(url);
   res.json(results);
 });
+
+app.use('/.netlify/functions/api', router);
 
 export default app;
